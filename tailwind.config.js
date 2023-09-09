@@ -1,18 +1,89 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{html,js,jsx}',
+    './components/**/*.{html,js,jsx}',
+    './sections/**/*.{html,js,jsx}',
+    './styles/**/*.{js,jsx}',
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+  mode: 'jit',
+ theme: {
+    fontFamily: {
+      montserrat: ["'Montserrat'", "sans-serif"],
+      inter: ["'Inter'", "sans-serif"],
+      cormorant: ["'Cormorant'", "serif"],
+      montaga: ["'Montaga'", "serif"]
     },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#3059B8",
+          "100": "rgba(48, 89, 184, .1)",
+          "200": "rgba(48, 89, 184, .2)",
+          "300": "rgba(48, 89, 184, .3)",
+          "400": "rgba(48, 89, 184, .4)",
+          "500": "rgba(48, 89, 184, .5)",
+          "600": "rgba(48, 89, 184, .6)",
+          "700": "rgba(48, 89, 184, .7)",
+          "800": "rgba(48, 89, 184, .8)",
+          "900": "rgba(48, 89, 184, .9)",
+
+          light: {
+            DEFAULT: "#C2CDFD",
+            "100": "rgba(194, 205, 253, .1)",
+            "200": "rgba(194, 205, 253, .2)",
+            "300": "rgba(194, 205, 253, .3)",
+            "400": "rgba(194, 205, 253, .4)",
+            "500": "rgba(194, 205, 253, .5)",
+            "600": "rgba(194, 205, 253, .6)",
+            "700": "rgba(194, 205, 253, .7)",
+            "800": "rgba(194, 205, 253, .8)",
+            "900": "rgba(194, 205, 253, .9)"
+          },
+
+          lighter: {
+            DEFAULT: "#DAE1FF",
+            "100": "rgba(194, 205, 253, .1)",
+            "200": "rgba(194, 205, 253, .2)",
+            "300": "rgba(194, 205, 253, .3)",
+            "400": "rgba(194, 205, 253, .4)",
+            "500": "rgba(194, 205, 253, .5)",
+            "600": "rgba(194, 205, 253, .6)",
+            "700": "rgba(194, 205, 253, .7)",
+            "800": "rgba(194, 205, 253, .8)",
+            "900": "rgba(194, 205, 253, .9)"
+          }
+        },
+        secondary: {
+          DEFAULT: "#FFE5B4",
+          "100": "rgba(255, 229, 180, .1)",
+          "200": "rgba(255, 229, 180, .2)",
+          "300": "rgba(255, 229, 180, .3)",
+          "400": "rgba(255, 229, 180, .4)",
+          "500": "rgba(255, 229, 180, .5)",
+          "600": "rgba(255, 229, 180, .6)",
+          "700": "rgba(255, 229, 180, .7)",
+          "800": "rgba(255, 229, 180, .8)",
+          "900": "rgba(255, 229, 180, .9)",
+
+          darker: {
+            DEFAULT: "rgba(121, 89, 0, 1)",
+            "100": "rgba(121, 89, 0, .1)",
+            "200": "rgba(121, 89, 0, .2)",
+            "300": "rgba(121, 89, 0, .3)",
+            "400": "rgba(121, 89, 0, .4)",
+            "500": "rgba(121, 89, 0, .5)",
+            "600": "rgba(121, 89, 0, .6)",
+            "700": "rgba(121, 89, 0, .7)",
+            "800": "rgba(121, 89, 0, .8)",
+            "900": "rgba(121, 89, 0, .9)"
+          }
+        }
+      }
+    }
   },
+      transitionTimingFunction: {
+        'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
+      },
   plugins: [],
-}
+};

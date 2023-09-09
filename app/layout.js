@@ -1,16 +1,12 @@
-import './globals.css'
+import '../styles/globals.css'
+
 import { Footer, Nav } from '../components'
-// 
 
-// import { Inter } from 'next/font/google'
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Showp.co',
+  title: 'Shop.co',
   description: 'FIND CLOTHES THAT MATCHES YOUR STYLE',
 }
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
